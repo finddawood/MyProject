@@ -1,0 +1,26 @@
+1️⃣ Phishing Email (Test Case)
+
+Subject: Account Security Alert – Immediate Action Required
+Body:
+Your account has been temporarily restricted due to suspicious activity.
+To restore access, verify your identity immediately by clicking the link below:
+http://secure-account-verify.example.com
+
+Failure to confirm within 24 hours will result in permanent suspension.
+
+python -m src.detect_phishing --subject "Account Security Alert – Immediate Action Required" --body "Your account has been temporarily restricted due to suspicious activity. Verify your identity immediately at http://secure-account-verify.example.com"
+
+
+Benign Email (Test Case)
+
+Subject: Team Meeting Reminder
+Body:
+This is a reminder that our weekly team meeting will be held tomorrow at 10:00 AM in the main conference room.
+Please review the attached agenda before attending.
+
+python -m src.detect_phishing --subject "Team Meeting Reminder" --body "This is a reminder that our weekly team meeting will be held tomorrow at 10:00 AM in the main conference room. Please review the attached agenda before attending."
+
+
+
+SELECT * FROM email_analysis ORDER BY id DESC LIMIT 5;
+SELECT * FROM training_runs ORDER BY id DESC LIMIT 5;
